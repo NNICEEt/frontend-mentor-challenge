@@ -1,0 +1,212 @@
+@font-face {
+	font-family: "Inter";
+	src: url("./assets/fonts/static/Inter-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("./assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("./assets/fonts/static/Inter-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	--color-grey-700: hsl(0, 0%, 20%);
+	--color-grey-800: hsl(0, 0%, 12%);
+	--color-grey-900: hsl(0, 0%, 8%);
+
+	--color-green-500: hsl(75, 94%, 57%);
+
+	--color-white: hsl(0, 0%, 100%);
+
+	--color-bg: var(--color-grey-900);
+	--color-surface: var(--color-grey-800);
+	--color-surface-muted: var(--color-grey-700);
+	--color-text: var(--color-white);
+	--color-accent: var(--color-green-500);
+
+	--font-family-sans: "Inter", sans-serif;
+
+	--font-weight-regular: 400;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+
+	--font-size-14: 14px;
+	--font-size-24: 24px;
+
+	--line-height-150: 1.5;
+
+	--letter-spacing-0: 0px;
+
+	--text-preset-1-size: var(--font-size-24);
+	--text-preset-1-weight: var(--font-weight-semibold);
+	--text-preset-1-line-height: var(--line-height-150);
+	--text-preset-1-letter-spacing: var(--letter-spacing-0);
+
+	--text-preset-2-size: var(--font-size-14);
+	--text-preset-2-weight: var(--font-weight-regular);
+	--text-preset-2-line-height: var(--line-height-150);
+	--text-preset-2-letter-spacing: var(--letter-spacing-0);
+
+	--text-preset-2-bold-size: var(--font-size-14);
+	--text-preset-2-bold-weight: var(--font-weight-bold);
+	--text-preset-2-bold-line-height: var(--line-height-150);
+	--text-preset-2-bold-letter-spacing: var(--letter-spacing-0);
+
+	--space-50: 4px;
+	--space-100: 8px;
+	--space-150: 12px;
+	--space-200: 16px;
+	--space-300: 24px;
+	--space-500: 40px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+body {
+	font-family: var(--font-family-sans);
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	min-height: 100vh;
+}
+
+.page {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.page__container {
+	padding: 0 25px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.profile-card {
+	background-color: var(--color-surface);
+	border-radius: 12px;
+	padding: var(--space-300);
+	width: 384px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: var(--space-300);
+}
+
+.profile-card__avatar {
+	border-radius: 50%;
+	width: 88px;
+	height: 88px;
+	object-fit: cover;
+	margin: 0 auto;
+}
+
+.profile-card__details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: var(--space-50);
+}
+
+.profile-card__name {
+	font-size: var(--text-preset-1-size);
+	font-weight: var(--text-preset-1-weight);
+	line-height: var(--text-preset-1-line-height);
+	letter-spacing: var(--text-preset-1-letter-spacing);
+}
+
+.profile-card__location {
+	font-size: var(--text-preset-2-bold-size);
+	font-weight: var(--text-preset-2-bold-weight);
+	line-height: var(--text-preset-2-bold-line-height);
+	letter-spacing: var(--text-preset-2-bold-letter-spacing);
+	color: var(--color-accent);
+}
+
+.profile-card__bio {
+	font-size: var(--text-preset-2-size);
+	font-weight: var(--text-preset-2-weight);
+	line-height: var(--text-preset-2-line-height);
+	letter-spacing: var(--text-preset-2-letter-spacing);
+	color: var(--color-text);
+	text-align: center;
+}
+
+.profile-card__social-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-200);
+}
+
+.profile-card__social-link {
+	width: 100%;
+}
+
+.link-button {
+	font-size: var(--text-preset-2-bold-size);
+	font-weight: var(--text-preset-2-bold-weight);
+	line-height: var(--text-preset-2-bold-line-height);
+	letter-spacing: var(--text-preset-2-bold-letter-spacing);
+	background-color: var(--color-surface-muted);
+	color: var(--color-text);
+	border-radius: 8px;
+
+	display: inline-block;
+	padding: var(--space-150);
+	text-align: center;
+	text-decoration: none;
+}
+
+.link-button:hover {
+	background-color: var(--color-accent);
+	color: var(--color-surface);
+}
+
+.link-button--full {
+	display: block;
+	width: 100%;
+}
+
+.profile-card__social-links__item__label {
+	font-size: var(--text-preset-2-size);
+	font-weight: var(--text-preset-2-weight);
+	line-height: var(--text-preset-2-line-height);
+	letter-spacing: var(--text-preset-2-letter-spacing);
+	color: var(--color-text);
+}
+
+@media (min-width: 375px) {
+	.profile-card {
+		padding: var(--space-500);
+	}
+}
